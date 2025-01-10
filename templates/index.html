@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP 破解器</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" href="static/images/favicon.ico" type="image/x-icon">
+    <!-- 引入外部 JavaScript 文件 -->
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+    <h1>VIP 破解器</h1>
+
+    <!-- 路线选择 -->
+    <form>
+        <label for="line">线路选择：</label>
+        <select name="line" id="line">
+            <option value="line1" selected>线路 1</option>
+            <option value="line2">未开通</option>
+            <option value="line3">未开通</option>
+        </select>
+    </form>
+
+    <!-- 搜索方式选择 -->
+    <form id="search-mode-form">
+        <label for="search_mode">搜索方式：</label>
+        <select name="search_mode" id="search_mode" onchange="updateSearchMode()">
+            <option value="website" selected>网址搜索</option>
+            <option value="movie">电影名搜索</option>
+        </select>
+    </form>
+
+    <!-- 搜索输入和提示 -->
+    <form id="search-form">
+        <div class="input-container">
+            <input type="text" id="search_box" placeholder="请粘贴视频网址">
+            <!-- 使用图片作为清空按钮 -->
+            <img src="{{ url_for('static', filename='images/清空.jpg') }}" id="clearButton" alt="清空按钮">
+        </div>
+    </form>
+    
+
+    <!-- 开始破解按钮 -->
+    <div style="display: flex; justify-content: center; gap: 10px">
+        <button type="button" id="sendButton">开始破解</button>
+    </div>
+
+    <br><br><br><br>
+    <!-- 视频平台选择 -->
+    <p>选择网址：（请复制视频网址并点击上一步返回）</p>
+    <table>
+        <tr>
+            <td><img src="{{ url_for('static', filename='images/爱奇艺.png') }}" alt="无法显示图片"></td>
+            <td><img src="{{ url_for('static', filename='images/腾讯视频.jpg') }}" alt="无法显示图片"></td>
+            <td><img src="{{ url_for('static', filename='images/咪咕视频.avif') }}" alt="无法显示图片"></td>
+            <td><img src="{{ url_for('static', filename='images/芒果TV.png') }}" alt="无法显示图片"></td>
+            <td><img src="{{ url_for('static', filename='images/哔哩哔哩.png') }}" alt="无法显示图片"></td>
+            <td><img src="{{ url_for('static', filename='images/优酷.jpg') }}" alt="无法显示图片"></td>
+            <td><img src="{{ url_for('static', filename='images/youtube.jpg') }}" alt="无法显示图片"></td>
+        </tr>
+        <tr>
+            <td><a href="https://www.iqiyi.com/" target="_self">爱奇艺</a></td>
+            <td><a href="https://v.qq.com/" target="_self">腾讯视频</a></td>
+            <td><a href="https://www.migu.cn/beta_/video.html" target="_self">咪咕视频</a></td>
+            <td><a href="https://www.mgtv.com/" target="_self">芒果TV</a></td>
+            <td><a href="https://www.bilibili.com/v/douga/" target="_self">哔哩哔哩</a></td>
+            <td><a href="https://www.youku.com/" target="_self">优酷</a></td>
+            <td><a href="https://www.youtube.com/" target="_self">YouTube</a></td>
+        </tr>
+    </table>
+</body>
+</html>
+

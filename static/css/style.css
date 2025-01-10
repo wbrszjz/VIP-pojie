@@ -1,0 +1,227 @@
+* {
+    transition: all 0.3s ease;  /* 为所有元素添加过渡效果 */
+}
+
+h1 {
+    animation: fadeIn 1s ease-out;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 242, 226);
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #4CAF50;
+}
+
+form {
+    text-align: center;
+    margin: 20px 0;
+}
+
+label {
+    font-size: 1.1em;
+    margin-right: 10px;
+}
+
+select {
+    padding: 5px 10px;
+    font-size: 1em;
+}
+
+p {
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+table {
+    margin: 20px auto;
+    width: 90%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #4CAF50; /* 表头背景色 */
+    color: white;              /* 白色文字 */
+    font-weight: bold;         /* 使表头加粗 */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* 偶数行的背景色 */
+}
+
+tr:hover {
+    background-color: #f7f6f6; /* 鼠标悬停时的行背景色 */
+}
+
+img {
+    width: 50px;
+    height: auto;
+    border-radius: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+input[type="text"] {
+    width: 90%;
+    max-width: 600px;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="text"], input[type="submit"], #sendButton {
+    border-radius: 12px; /* 统一圆角 */
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+
+    img {
+        width: 40px;
+    }
+
+    th, td {
+        font-size: 0.9em;
+        padding: 5px;
+    }
+
+    input[type="text"] {
+        width: 90%;
+    }
+
+    input[type="submit"] {
+        width: 80%;
+        font-size: 0.9em;
+        padding: 10px;
+    }
+
+    .input-container {
+        width: 100%; /* 宽度自动适应 */
+    }
+
+    input[type="text"] {
+        width: 95%; /* 增大输入框的宽度 */
+    }
+
+    #sendButton {
+        width: 100%;  /* 按钮全宽 */
+        padding: 15px 0;  /* 更大的上下内边距 */
+    }
+}
+
+
+
+
+/* 设置按钮的背景颜色和文字颜色 */
+#sendButton {
+    background-color: #4CAF50; /* 绿色背景 */
+    color: white;              /* 白色文字 */
+    border: none;              /* 无边框 */
+    padding: 10px 32px;        /* 上下15px，左右32px的内边距 */
+    text-align: center;        /* 文字居中 */
+    text-decoration: none;     /* 去掉下划线 */
+    display: inline-block;     /* 使按钮与其它元素在同一行 */
+    font-size: 16px;           /* 字体大小 */
+    cursor: pointer;          /* 鼠标悬停时变成指针 */
+    border-radius: 4px;        /* 圆角 */
+    transition: background-color 0.3s ease; /* 背景颜色渐变过渡 */
+    background: linear-gradient(135deg, #4CAF50, #45a049); /* 渐变背景 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* 按钮阴影 */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* 按钮阴影过渡 */
+}
+
+/* 当鼠标悬停在按钮上时改变背景颜色 */
+#sendButton:hover {
+    background-color: #45a049; /* 鼠标悬停时背景颜色稍微变暗 */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  /* 鼠标悬停时的阴影效果 */
+}
+
+
+
+
+/* 将输入框容器水平居中 */
+#search-form {
+    display: flex;
+    justify-content: center;  /* 使输入框容器居中 */
+    width: 100%;              /* 使容器占满整个宽度 */
+    margin-top: 20px;         /* 可选，调整容器距离顶部的间距 */
+}
+
+/* 输入框容器 */
+.input-container {
+    position: relative;  /* 让容器成为定位上下文 */
+    width: 500px;        /* 输入框容器的固定宽度，增加宽度 */
+}
+
+/* 输入框样式 */
+#search_box {
+    width: 100%;                /* 输入框占满整个容器 */
+    padding: 10px 30px 10px 10px; /* 左边和右边的内边距，右边预留空间放清空按钮 */
+    font-size: 14px;            /* 输入框字体大小 */
+    border-radius: 4px;         /* 输入框圆角 */
+    border: 1px solid #ccc;     /* 输入框边框颜色 */
+    box-sizing: border-box;     /* 包括内边距和边框在内计算宽度 */
+}
+
+/* 清空按钮图片的样式 */
+#clearButton {
+    position: absolute;         /* 绝对定位 */
+    top: 50%;                   /* 垂直居中 */
+    right: 10px;                /* 离右边 10px */
+    transform: translateY(-50%); /* 垂直居中 */
+    width: 20px;                /* 图片宽度 */
+    height: 20px;               /* 图片高度 */
+    cursor: pointer;           /* 鼠标悬停时显示指针 */
+}
+
+/* 鼠标悬停时图片效果 */
+#clearButton:hover {
+    opacity: 0.7;               /* 鼠标悬停时图片的透明度变化 */
+    transform: translateY(-50%) scale(1.05); /* 鼠标悬停时略微放大 */
+}
